@@ -31,8 +31,9 @@ bufsize_t ExeElementWrapper::getFieldSize(size_t fieldId, size_t subField)
     offset_t fullSize = this->getSize();
     BYTE *bgnPtr =  (BYTE*) getPtr();
     BYTE *endPtr = bgnPtr + fullSize;
-    offset_t dif =  offset_t (endPtr) - offset_t (ptr);
+    if (offset_t (endPtr) < offset_t (ptr)) return 0; // the element is smaller than the field offset
 
+    offset_t dif =  offset_t (endPtr) - offset_t (ptr);
     return (bufsize_t) dif;
 }
 
