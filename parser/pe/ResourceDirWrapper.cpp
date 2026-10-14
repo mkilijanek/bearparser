@@ -270,6 +270,11 @@ IMAGE_RESOURCE_DIRECTORY_STRING* ResourceEntryWrapper::getNameStr()
 
     const size_t BASIC_SIZE = sizeof(IMAGE_RESOURCE_DIRECTORY_STRING);
     IMAGE_RESOURCE_DIRECTORY_STRING *ptr = (IMAGE_RESOURCE_DIRECTORY_STRING*) this->m_Exe->getContentAt(nameOff, Executable::RAW, BASIC_SIZE);
+    if (!ptr) return NULL;
+
+    // the name is Length UTF-16 characters: all of them must fit in the buffer
+    const bufsize_t fullSize = sizeof(WORD) + bufsize_t(ptr->Length) * sizeof(WORD);
+    if (!this->m_Exe->getContentAt(nameOff, Executable::RAW, fullSize)) return NULL;
     return ptr;
 }
 
