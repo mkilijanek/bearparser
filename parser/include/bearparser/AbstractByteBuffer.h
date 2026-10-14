@@ -57,6 +57,9 @@ public:
     QString getStringValue(offset_t rawOffset, bufsize_t len = BUFSIZE_MAX, bool acceptNonTerminated = false);
     QString getWStringValue(offset_t rawOffset, bufsize_t len);
     QString getWAsciiStringValue(offset_t rawOffset, bufsize_t len, bool acceptNonTerminated = false);
+    // a NUL-terminated string at ptr, read no further than maxLen bytes and the end of the buffer
+    QString getStringAtPtr(const char *ptr, bufsize_t maxLen = BUFSIZE_MAX);
+    bufsize_t getStringLenAtPtr(const char *ptr, bufsize_t maxLen = BUFSIZE_MAX);
 
     bufsize_t getMaxSizeFromOffset(offset_t startOffset);
     bufsize_t getMaxSizeFromPtr(BYTE *ptr) { return getMaxSizeFromOffset(getOffset(ptr)); }

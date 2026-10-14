@@ -87,7 +87,7 @@ public:
     offset_t getFuncNameRva();
 
     char* getFuncName();
-    QString getuncNameStr() { char* name = getFuncName(); return name ? name : ""; }
+    QString getuncNameStr() { char* name = getFuncName(); return name ? m_Exe->getStringAtPtr(name) : ""; }
     char* getForwarder(); // NULL if not forwarded
     QString getForwarderStr() { char* forwarder = getForwarder(); return forwarder ? forwarder : ""; }
 

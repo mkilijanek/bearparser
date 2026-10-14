@@ -12,7 +12,7 @@ QVariant WrappedValue::getQVariant()
     if (m_Type == STRING) {
         char *strPtr = (char*) this->m_Owner->getContentAt(m_Offset, m_Size);
         if (strPtr == NULL) return QVariant();
-        return QString(strPtr);
+        return m_Owner->getStringAtPtr(strPtr, m_Size);
     }
     if (this->m_Type == WSTRING) {
 
