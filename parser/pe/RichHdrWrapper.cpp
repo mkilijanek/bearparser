@@ -152,7 +152,9 @@ pe::RICH_COMP_ID RichHdrWrapper::getCompId(size_t fieldId)
 
 inline DWORD rol32(DWORD temp, DWORD i)
 {
-    return ((temp << (i%32)) | (temp >> (32-(i%32))));
+    const DWORD n = i % 32;
+    if (n == 0) return temp; // shifting a 32-bit value by 32 is undefined
+    return ((temp << n) | (temp >> (32 - n)));
 }
 
 DWORD RichHdrWrapper::calcChecksum()
