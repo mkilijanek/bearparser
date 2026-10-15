@@ -66,6 +66,9 @@ jobs:
       - name: Test that bearcommander runs
         run: ctest --test-dir build --output-on-failure --no-tests=error -R '^TestRuns$'
 
+      - name: Unit tests of the library
+        run: ctest --test-dir build --output-on-failure --no-tests=error -R '^TestSetTextValue$'
+
       # Advisory for now: at the pinned samples, x86/kernel32 explist fails on
       # master -- forwarded exports lose their forwarder name (_isFuncChar in
       # parser/Util.cpp counts the charset's terminating NUL as a name
