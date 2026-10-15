@@ -131,6 +131,7 @@ void* ImportedFuncWrapper::getFieldPtr(size_t fId, size_t subField)
         {
             if (isByOrdinal()) return NULL;
             IMAGE_IMPORT_BY_NAME* dataPtr = this->getImportByNamePtr();
+            if (dataPtr == NULL) return NULL;
             return (void*) &dataPtr->Hint;
         }
     };
