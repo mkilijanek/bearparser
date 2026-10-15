@@ -55,6 +55,8 @@ void ResourcesAlbum::clear()
     //---
     allLeafs.clear();
     allTypes.clear();
+    allWrappers.clear(); // holds the content wrappers deleted above
+    idToLeafType.clear();
 }
 
 void ResourcesAlbum::putLeaf(ResourceLeafWrapper* leaf, long topEntryId)
