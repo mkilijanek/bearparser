@@ -676,6 +676,11 @@ bool PEFile::dumpSection(SectionHdrWrapper *sec, QString fileName)
 bool PEFile::unbindImports()
 {
     IMAGE_DATA_DIRECTORY* ddir = this->getDataDirectory();
+    DataDirWrapper* ddirWrapper = dynamic_cast<DataDirWrapper*> (this->wrappers[WR_DATADIR]);
+    if (!ddir || !ddirWrapper || ddirWrapper->getDirsCount() <= pe::DIR_BOUND_IMPORT) {
+        // the Data Directory has no Bound Imports entry: nothing to do here!
+        return true;
+    }
     if (ddir[pe::DIR_BOUND_IMPORT].VirtualAddress == 0  && ddir[pe::DIR_BOUND_IMPORT].Size == 0) {
         // No bound imports already, nothing to do here!
         return true;
