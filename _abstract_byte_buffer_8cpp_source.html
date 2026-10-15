@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> endOffset = offset + size;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (endOffset &gt; fileSize) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (size &gt; fileSize - offset) { <span class="comment">// offset &lt; fileSize: no underflow; offset + size may wrap</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (allowExceptions) <span class="keywordflow">throw</span> <a class="code hl_function" href="class_buffer_exception.html#a4af32a7ca757175a41906ec6e889b126">BufferException</a>(<span class="stringliteral">&quot;Too big size requested! Buffer size: &quot;</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            + QString::number(fileSize) + <span class="stringliteral">&quot; vs end of the requested area: 0x&quot;</span> + QString::number(endOffset, 16));</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> NULL;</div>
@@ -533,8 +533,8 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            }</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        }</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    }</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    <span class="comment">// newLen already includes the terminator (if it fits in the field)</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    memcpy(textPtr, newTextC, newLen);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    memcpy(textPtr, newTextC, newLen);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    textPtr[newLen] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>}</div>
 </div>
