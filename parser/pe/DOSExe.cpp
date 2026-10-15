@@ -40,6 +40,8 @@ DOSExe::DOSExe(AbstractByteBuffer *v_buf)
 void DOSExe::wrap()
 {
     this->dosHdrWrapper = new DosHdrWrapper(this);
+    // owned by the wrappers map from now on, so that it is freed also if we throw below
+    this->wrappers[WR_DOS_HDR] = this->dosHdrWrapper;
 
     m_dosHdr = (IMAGE_DOS_HEADER*) getContentAt(0, sizeof(IMAGE_DOS_HEADER));
     if (m_dosHdr == NULL) throw ExeException("Could not Wrap!");
@@ -54,7 +56,6 @@ void DOSExe::wrap()
         Logger::append(Logger::D_WARNING, "It is not a DOS file!\n");
         throw ExeException("It is not a DOS file!");
     }
-    this->wrappers[WR_DOS_HDR] = this->dosHdrWrapper;
 }
 
 offset_t DOSExe::peSignatureOffset()
