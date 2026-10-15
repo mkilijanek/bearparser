@@ -95,7 +95,7 @@ bool pe_util::validateFuncName(const char* fPtr, size_t bufSize)
 {
     if (!fPtr || !bufSize) return false;
 
-    for (char i = 0; i < bufSize; i++) {
+    for (size_t i = 0; i < bufSize; i++) {
         const char c = fPtr[i];
         if (c == 0) break;
         if (!_isFuncChar(c)) {
