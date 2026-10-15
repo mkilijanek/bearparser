@@ -22,7 +22,8 @@ bool SecurityDirWrapper::wrap()
     if (offset == INVALID_ADDR) return false;
     BYTE *ptr = NULL;
 
-    size_t fieldsSize = sizeof(cert->dwLength) + sizeof(cert->wRevision) + sizeof(cert->dwLength);
+    const size_t fieldsSize = sizeof(cert->dwLength) + sizeof(cert->wRevision) + sizeof(cert->wCertificateType);
+    if (cert->dwLength < fieldsSize) return false;
     size_t certSize = cert->dwLength - fieldsSize;
     ptr = m_Exe->getContentAt(offset, Executable::RAW, static_cast<bufsize_t>(certSize));
 
