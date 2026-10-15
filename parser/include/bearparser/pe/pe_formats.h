@@ -1907,7 +1907,7 @@ namespace pe {
         OH_ROM = 0x107
     };
 
-    enum resource_type {
+    enum resource_type : DWORD {
         RESTYPE_CURSOR = 1,
         RESTYPE_FONT = 8,
         RESTYPE_BITMAP = 2,
