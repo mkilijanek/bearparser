@@ -305,7 +305,11 @@ void* LdConfigDirWrapper::getFieldPtr(size_t fId, size_t subField)
         if (fieldDelta >= hdrSize) {
             return NULL;
         }
-        return m_Exe->getContentAt(this->getOffset() + fieldDelta, 1);
+        const offset_t dirOffset = this->getOffset();
+        if (dirOffset == INVALID_ADDR) {
+            return NULL;
+        }
+        return m_Exe->getContentAt(dirOffset + fieldDelta, 1);
     }
     return NULL;
 }
