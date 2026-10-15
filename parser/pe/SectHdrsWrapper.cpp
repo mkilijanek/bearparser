@@ -448,7 +448,7 @@ void SectHdrsWrapper::addMapping(SectionHdrWrapper *sec)
         }
     }
     if (vSec.find(endRVA) != vSec.end()) { //already exist
-        SectionHdrWrapper* prevSec = vSec[endRaw];
+        SectionHdrWrapper* prevSec = vSec[endRVA];
         if (prevSec == NULL) return;
         // keep the bigger one (with lower start address) in the mapping
         if (prevSec->getContentOffset(Executable::RVA) < sec->getContentOffset(Executable::RVA)) {
