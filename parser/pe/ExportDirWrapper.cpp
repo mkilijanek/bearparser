@@ -260,6 +260,8 @@ uint32_t ExportEntryWrapper::getOrdinal()
 uint32_t ExportEntryWrapper::getFuncNameId()
 {
     if (this->parentDir == NULL) return INVALID_ID;
+    // AddressOfNameOrdinals holds WORDs: functions above 0xFFFF cannot have a name
+    if (this->entryNum > 0xFFFF) return INVALID_ID;
 
     WORD ord = static_cast<WORD>(this->entryNum);
     std::map<WORD, DWORD>::iterator found = parentDir->ordToNameId.find(ord);
