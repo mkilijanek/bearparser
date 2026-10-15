@@ -290,7 +290,8 @@ bool AbstractByteBuffer::intersectsBlock(offset_t rawOffset, bufsize_t size)
 template <typename INT_TYPE>
 INT_TYPE _getNumValue(void* ptr)
 {
-    INT_TYPE val = *((INT_TYPE*)ptr);
+    INT_TYPE val = 0;
+    ::memcpy(&val, ptr, sizeof(INT_TYPE)); // the field may be unaligned
     return val;
 }
 
@@ -318,9 +319,11 @@ uint64_t AbstractByteBuffer::getNumValue(offset_t offset, bufsize_t size, bool* 
 template <typename INT_TYPE>
 bool _setNumValue(void* ptr, INT_TYPE nVal)
 {
-    INT_TYPE* valPtr = (INT_TYPE*)ptr;
-    if ((*valPtr) == nVal) return false;
-    (*valPtr) = nVal;
+    // the field may be unaligned
+    INT_TYPE currVal = 0;
+    ::memcpy(&currVal, ptr, sizeof(INT_TYPE));
+    if (currVal == nVal) return false;
+    ::memcpy(ptr, &nVal, sizeof(INT_TYPE));
     return true;
 }
 
