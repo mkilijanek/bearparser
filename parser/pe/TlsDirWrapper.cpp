@@ -119,14 +119,10 @@ void* TlsEntryWrapper::getPtr()
     const offset_t firstVA = static_cast<offset_t>(this->parentDir->getNumValue(TlsDirWrapper::CALLBACKS_ADDR, &isOk));
     if (!isOk || (firstVA == 0)) return nullptr;
 
-    const offset_t firstRaw = m_Exe->toRaw(firstVA, Executable::VA);
-    if (firstRaw == INVALID_ADDR) {
-        return nullptr;
-    }
-
+    // the callbacks array is contiguous in the virtual space, not necessarily in the file:
     const bufsize_t addrSize = this->parentDir->getFieldSize(TlsDirWrapper::CALLBACKS_ADDR);
-    const offset_t myRaw = firstRaw + (addrSize * this->entryNum);
-    BYTE *ptr  = m_Exe->getContentAt(myRaw, Executable::RAW, addrSize);
+    const offset_t myVA = firstVA + (addrSize * this->entryNum);
+    BYTE *ptr  = m_Exe->getContentAt(myVA, Executable::VA, addrSize);
     return ptr;
 }
 

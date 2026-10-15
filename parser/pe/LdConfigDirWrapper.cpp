@@ -509,13 +509,17 @@ void* LdConfigEntryWrapper::getPtr()
     bufsize_t fieldSize = static_cast<bufsize_t>(parentDir->firstSubEntrySize(this->parentFieldId));
     if (fieldSize == 0) return NULL;
     
-    offset_t offset = this->getOffset(first);
-    if (offset == INVALID_ADDR) return NULL;
+    // the table is contiguous in the virtual space, not necessarily in the file:
+    bool isOk = false;
+    offset_t offset = parentDir->getNumValue(this->parentFieldId, &isOk);
+    if (!isOk) return NULL;
+    Executable::addr_type aT = parentDir->containsAddrType(this->parentFieldId);
+    if (aT == Executable::NOT_ADDR) return NULL;
     
     //offset from the beginning:
     offset_t fieldOffset = (this->entryNum * fieldSize);
     offset += fieldOffset;
-    void *ptr = m_Exe->getContentAt(offset, Executable::RAW, fieldSize);
+    void *ptr = m_Exe->getContentAt(offset, aT, fieldSize);
     return ptr;
 }
 
