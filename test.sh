@@ -42,13 +42,19 @@ do
 
 	./test1.sh "$BCMD_DIR" "$p2" "$p1"
 	if [[ "$?" != 0 ]]; then
-		FAILED=$FAILED+1
+		FAILED=$((FAILED+1))
 	fi
 done < "$tests_list"
 
 if [[ "$FAILED" == 0 ]]; then
 	echo "All passed"
+else
+	echo "Failed tests: ""$FAILED"
 fi
 
 cd "$START_DIR"
+
+if [[ "$FAILED" != 0 ]]; then
+	exit 1
+fi
 
