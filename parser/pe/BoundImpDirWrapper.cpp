@@ -103,7 +103,7 @@ QString BoundEntryWrapper::getName()
 {
     char* name = getLibraryName();
     if (!name) return "";
-    return QString(name);
+    return m_Exe->getStringAtPtr(name);
 }
 
 char* BoundEntryWrapper::getLibraryName()

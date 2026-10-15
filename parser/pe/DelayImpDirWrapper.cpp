@@ -132,7 +132,7 @@ QString DelayImpEntryWrapper::getName()
 {
     char* name = getLibraryName();
     if (!name) return "";
-    return QString(name);
+    return m_Exe->getStringAtPtr(name);
 }
 
 char* DelayImpEntryWrapper::getLibraryName()

@@ -319,7 +319,7 @@ QString DebugDirCVEntryWrapper::translateFieldContent(size_t fId)
     switch (fId) {
         case F_CVDBG_SIGN: return getSignature();
         case F_CVDBG_GUID: return getGuidString();
-        case F_CVDBG_PDB: return pdb ? pdb : "";
+        case F_CVDBG_PDB: return pdb ? m_Exe->getStringAtPtr(pdb) : "";
     }
     return "";
 }

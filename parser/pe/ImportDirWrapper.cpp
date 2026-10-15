@@ -220,7 +220,7 @@ QString ImportEntryWrapper::getName()
 {
     char *name = getLibraryName();
     if (!name) return "";
-    return name;
+    return m_Exe->getStringAtPtr(name);
 }
 
 bool ImportEntryWrapper::isBound()

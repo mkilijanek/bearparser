@@ -159,6 +159,25 @@ QString AbstractByteBuffer::getStringValue(offset_t rawOffset, bufsize_t size, b
     return QString::fromUtf8(ptr, static_cast<int>(asciiLen));
 }
 
+bufsize_t AbstractByteBuffer::getStringLenAtPtr(const char *ptr, bufsize_t maxLen)
+{
+    if (!ptr) return 0;
+    bufsize_t limit = getMaxSizeFromPtr((BYTE*) ptr);
+    if (maxLen < limit) limit = maxLen;
+
+    const char *end = (const char*) memchr(ptr, 0, limit);
+    if (end) return static_cast<bufsize_t>(end - ptr);
+    return limit;
+}
+
+QString AbstractByteBuffer::getStringAtPtr(const char *ptr, bufsize_t maxLen)
+{
+    if (!ptr) return "";
+    bufsize_t len = getStringLenAtPtr(ptr, maxLen);
+    if (len > INT_MAX) len = INT_MAX;
+    return QString::fromUtf8(ptr, static_cast<int>(len));
+}
+
 QString AbstractByteBuffer::getWStringValue(offset_t rawOffset, bufsize_t len)
 {
     const bufsize_t unitSize = sizeof(WORD);

@@ -12,7 +12,7 @@ bool imports_util::isNameValid(Executable *pe, char* myName)
 
     bool isInvalid = pe_util::hasNonPrintable(myName, upperLimit);
     if (isInvalid) return false;
-    if (pe_util::noWhiteCount(myName) == 0) return false;
+    if (pe_util::noWhiteCount(myName, pe->getStringLenAtPtr(myName, upperLimit)) == 0) return false;
 
     return true;
 }
@@ -242,7 +242,7 @@ QString ImportBaseFuncWrapper::getShortName()
     } else {
         char *fName = this->getFunctionName();
         if (!fName) return "";
-        functionName = fName;
+        functionName = m_Exe->getStringAtPtr(fName);
     }
     return functionName;
 }
@@ -255,7 +255,7 @@ QString ImportBaseFuncWrapper::getLibName()
     char *libName = p->getLibraryName();
     if (!libName) return "";
     
-    return QString(libName);
+    return m_Exe->getStringAtPtr(libName);
 }
 
 QString ImportBaseFuncWrapper::getName()

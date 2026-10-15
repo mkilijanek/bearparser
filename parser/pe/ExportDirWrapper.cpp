@@ -174,10 +174,11 @@ QString ExportDirWrapper::getLibraryName()
     char *name = this->_getLibraryName();
     if (!name) return name;
 
-    if (pe_util::isStrLonger(name, 100)) {
+    const bufsize_t len = m_Exe->getStringLenAtPtr(name);
+    if (len >= 100) {
         return INVALID_NAME;
     }
-    return QString(name);
+    return QString::fromUtf8(name, static_cast<int>(len));
 }
 
 //----------------------------------------------------------------------------------------------------
@@ -227,7 +228,7 @@ QString ExportEntryWrapper::getName()
     }
     char* name = getFuncName();
     if (name == NULL) return "";
-    return QString(name);
+    return m_Exe->getStringAtPtr(name);
 }
 
 QString ExportEntryWrapper::getFieldName(size_t fieldId)
