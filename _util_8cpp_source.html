@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> (!fPtr || !bufSize) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> i = 0; i &lt; bufSize; i++) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; bufSize; i++) {</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> c = fPtr[i];</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">if</span> (c == 0) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="_util_8cpp.html#aa4fdbecc18b0d1086fc76c27bc2db21d">_isFuncChar</a>(c)) {</div>
