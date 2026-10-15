@@ -387,8 +387,8 @@ bool AbstractByteBuffer::setTextValue(char* textPtr, std::string newText, size_t
             }
         }
     }
+    // newLen already includes the terminator (if it fits in the field)
     memcpy(textPtr, newTextC, newLen);
-    textPtr[newLen] = '\0';
     return true;
 }
 
