@@ -39,6 +39,9 @@ if(CMD_BUILD_TESTING)
 	# 0) does the application run
 	add_test (TestRuns ${CMAKE_BINARY_DIR}/bearcommander)
 	set_tests_properties(TestRuns PROPERTIES PASS_REGULAR_EXPRESSION "Bearparser")
+
+	# 0b) unit tests of the library itself; they need no sample files
+	add_subdirectory ( tests )
 	IF (NOT WIN32)
 		# 1) external tests
 		add_test (TestExternal ${CMAKE_SOURCE_DIR}/test.sh ${CMAKE_SOURCE_DIR})

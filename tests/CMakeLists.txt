@@ -1,0 +1,23 @@
+cmake_minimum_required (VERSION 3.12)
+project (bearparser_tests)
+
+if(USE_QT4)
+    find_package (Qt4 REQUIRED)
+    include_directories( ${QT_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} )
+    INCLUDE( ${QT_USE_FILE} )
+    ADD_DEFINITIONS( ${QT_DEFINITIONS} )
+else()
+    find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
+    find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
+endif()
+
+# AbstractByteBuffer::setTextValue: what it may and may not write
+add_executable (test_settextvalue test_settextvalue.cpp)
+add_dependencies (test_settextvalue bearparser)
+if(USE_QT4)
+    target_link_libraries (test_settextvalue ${PARSER_LIB} ${QT_QTCORE_LIBRARIES})
+else()
+    target_link_libraries (test_settextvalue ${PARSER_LIB} Qt${QT_VERSION_MAJOR}::Core)
+endif()
+add_test (TestSetTextValue test_settextvalue)
+set_tests_properties(TestSetTextValue PROPERTIES PASS_REGULAR_EXPRESSION "All passed")

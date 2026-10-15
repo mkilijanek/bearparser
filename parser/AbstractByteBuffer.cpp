@@ -396,7 +396,9 @@ bool AbstractByteBuffer::setTextValue(char* textPtr, std::string newText, size_t
     }
     //if both strings are same, do not overwrite
     const char* newTextC = newText.c_str();
-    if (!strcmp(newTextC, textPtr)) { //TODO: use a safe comparison
+    // strcmp stops at the terminator of newTextC at the latest, so it reads at most
+    // newLen bytes of textPtr -- the range that has just been checked above.
+    if (!strcmp(newTextC, textPtr)) {
         return false;
     }
     //if the field size is set:
