@@ -30,6 +30,7 @@ bufsize_t ExeElementWrapper::getFieldSize(size_t fieldId, size_t subField)
 
     offset_t fullSize = this->getSize();
     BYTE *bgnPtr =  (BYTE*) getPtr();
+    if (bgnPtr == NULL) return 0;
     BYTE *endPtr = bgnPtr + fullSize;
     offset_t dif =  offset_t (endPtr) - offset_t (ptr);
 
