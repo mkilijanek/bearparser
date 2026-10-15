@@ -226,11 +226,8 @@ uint64_t DelayImpFuncWrapper::getOrdinal()
     uint64_t addr = this->getNumValue(NAMETHUNK_ADDR, &isOk);
     if (!isOk || addr == INVALID_ADDR) return INVALID_ADDR;
 
-    size_t fieldSize = this->ptrLen() * 8; // in bits!
-    size_t shiftSize = (sizeof(addr) - fieldSize) + 1;
-
-    uint64_t shiftedVal = (addr << shiftSize) >> shiftSize;
-    return shiftedVal;
+    // the ordinal is in the low 16 bits of the thunk (the highest bit is the ordinal flag)
+    return addr & 0xFFFF;
 }
 
 char* DelayImpFuncWrapper::getFunctionName()
