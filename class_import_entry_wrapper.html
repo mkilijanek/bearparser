@@ -251,8 +251,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1b2b8f6c4056609a33cef548e848e7a4 pub_methods_class_abstract_byte_buffer" id="r_a1b2b8f6c4056609a33cef548e848e7a4"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#a1b2b8f6c4056609a33cef548e848e7a4">getStringValue</a> (<a class="el" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> rawOffset, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> len=<a class="el" href="_abstract_byte_buffer_8h.html#a06eeddcfd3f26853ac1210c897f8a003">BUFSIZE_MAX</a>, bool acceptNonTerminated=false)</td></tr>
 <tr class="memitem:ac56fe1119d76076dc58fd08cde2e2bb3 pub_methods_class_abstract_byte_buffer" id="r_ac56fe1119d76076dc58fd08cde2e2bb3"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#ac56fe1119d76076dc58fd08cde2e2bb3">getWStringValue</a> (<a class="el" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> rawOffset, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> len)</td></tr>
 <tr class="memitem:af42b7e4acd2e6d9b1ef6213ce494a45a pub_methods_class_abstract_byte_buffer" id="r_af42b7e4acd2e6d9b1ef6213ce494a45a"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#af42b7e4acd2e6d9b1ef6213ce494a45a">getWAsciiStringValue</a> (<a class="el" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> rawOffset, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> len, bool acceptNonTerminated=false)</td></tr>
-<tr class="memitem:aba099ced8dd45bac432cb3af3abff910 pub_methods_class_abstract_byte_buffer" id="r_aba099ced8dd45bac432cb3af3abff910"><td class="memItemLeft">QString&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#aba099ced8dd45bac432cb3af3abff910">getStringAtPtr</a> (const char *ptr, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> maxLen=<a class="el" href="_abstract_byte_buffer_8h.html#a06eeddcfd3f26853ac1210c897f8a003">BUFSIZE_MAX</a>)</td></tr>
-<tr class="memitem:a0757c0f9b1afb7397f1ec44d36d3a7af pub_methods_class_abstract_byte_buffer" id="r_a0757c0f9b1afb7397f1ec44d36d3a7af"><td class="memItemLeft"><a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a>&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#a0757c0f9b1afb7397f1ec44d36d3a7af">getStringLenAtPtr</a> (const char *ptr, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> maxLen=<a class="el" href="_abstract_byte_buffer_8h.html#a06eeddcfd3f26853ac1210c897f8a003">BUFSIZE_MAX</a>)</td></tr>
 <tr class="memitem:a04f5bb327ac0789b872d0771b11adc6b pub_methods_class_abstract_byte_buffer" id="r_a04f5bb327ac0789b872d0771b11adc6b"><td class="memItemLeft"><a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a>&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#a04f5bb327ac0789b872d0771b11adc6b">getMaxSizeFromOffset</a> (<a class="el" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> startOffset)</td></tr>
 <tr class="memitem:a4cbbe66b2777fa7c450f612ec3a20ae6 pub_methods_class_abstract_byte_buffer" id="r_a4cbbe66b2777fa7c450f612ec3a20ae6"><td class="memItemLeft"><a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a>&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#a4cbbe66b2777fa7c450f612ec3a20ae6">getMaxSizeFromPtr</a> (BYTE *ptr)</td></tr>
 <tr class="memitem:ad6e51045cafb47ed7d4467b55ad74d4f pub_methods_class_abstract_byte_buffer" id="r_ad6e51045cafb47ed7d4467b55ad74d4f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="class_abstract_byte_buffer.html#ad6e51045cafb47ed7d4467b55ad74d4f">isAreaEmpty</a> (<a class="el" href="_abstract_byte_buffer_8h.html#aea96e09e4ebfca2845a36a4d9882f7f6">offset_t</a> rawOffset, <a class="el" href="_abstract_byte_buffer_8h.html#afedfa40fa58dd4bc7148024a7ad12c76">bufsize_t</a> size)</td></tr>
@@ -374,71 +372,60 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_import_entry_wrapper_a37f0a126fa7693446cfdacc723a4e0a4_cgraph.png" border="0" usemap="#aclass_import_entry_wrapper_a37f0a126fa7693446cfdacc723a4e0a4_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_import_entry_wrapper_a37f0a126fa7693446cfdacc723a4e0a4_cgraph" id="aclass_import_entry_wrapper_a37f0a126fa7693446cfdacc723a4e0a4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,148,147,189"/>
-<area shape="rect" href="class_import_base_entry_wrapper.html#ad16dc8acadd054efecd45f7674571413" title=" " alt="" coords="195,103,366,144"/>
-<area shape="poly" title=" " alt="" coords="147,151,179,143,180,148,148,156"/>
-<area shape="rect" href="class_p_e_node_wrapper.html#a28b20b86c5782d2fe7e08249d0c503fd" title=" " alt="" coords="714,29,876,55"/>
-<area shape="poly" title=" " alt="" coords="102,146,144,117,194,89,258,65,326,47,394,35,463,28,592,24,699,29,699,34,592,29,463,33,395,40,327,52,260,70,196,94,146,121,105,150"/>
-<area shape="rect" href="class_import_entry_wrapper.html#ab63472dc9a23f18db573a468fc2a3c98" title=" " alt="" coords="213,192,348,233"/>
-<area shape="poly" title=" " alt="" coords="148,181,198,192,197,198,147,187"/>
-<area shape="rect" href="class_import_base_entry_wrapper.html#aa176da686bdcec05c9a4acd23c2cdf13" title=" " alt="" coords="441,342,606,382"/>
-<area shape="poly" title=" " alt="" coords="107,188,148,215,196,242,320,295,435,334,434,339,318,300,193,247,145,220,104,192"/>
-<area shape="rect" href="class_import_base_entry_wrapper.html#ac45174df1125d5b76924419a73948a40" title=" " alt="" coords="441,103,606,144"/>
-<area shape="poly" title=" " alt="" coords="367,121,426,121,426,126,367,126"/>
-<area shape="poly" title=" " alt="" coords="320,100,364,81,413,65,487,51,563,43,699,37,699,42,563,48,488,56,415,70,366,86,322,105"/>
-<area shape="rect" href="class_p_e_node_wrapper.html#a313df66e81dfce411fa83d0ebc08c935" title=" " alt="" coords="414,192,633,218"/>
-<area shape="poly" title=" " alt="" coords="344,142,469,184,467,189,343,147"/>
-<area shape="poly" title=" " alt="" coords="478,103,476,93,483,84,499,79,524,77,550,79,565,85,563,90,549,84,524,82,500,84,486,89,481,94,483,102"/>
-<area shape="poly" title=" " alt="" coords="755,31,746,21,751,11,768,5,795,3,826,5,841,13,838,17,824,11,795,8,769,10,755,15,752,20,759,27"/>
-<area shape="poly" title=" " alt="" coords="561,189,596,173,632,153,656,132,680,109,755,61,758,65,683,114,660,136,635,158,598,178,563,194"/>
-<area shape="poly" title=" " alt="" coords="484,193,476,183,480,174,497,167,524,165,554,168,569,175,567,180,553,173,524,171,498,173,484,178,481,183,488,190"/>
-<area shape="rect" href="class_exe_node_wrapper.html#a62bc3ef1f006f8b4ac823c3d573819ce" title=" " alt="" coords="681,192,909,218"/>
-<area shape="poly" title=" " alt="" coords="634,202,665,202,665,208,634,208"/>
-<area shape="rect" href="class_exe_node_wrapper.html#a5cd7f16e4529be2a96f87237e31b2611" title=" " alt="" coords="963,123,1118,148"/>
-<area shape="poly" title=" " alt="" coords="558,189,615,170,681,153,750,143,821,136,948,132,948,137,821,142,751,148,682,158,616,175,559,194"/>
-<area shape="poly" title=" " alt="" coords="755,193,746,183,751,173,768,167,795,165,826,168,841,175,838,180,824,173,795,171,769,173,755,178,752,183,759,190"/>
-<area shape="rect" href="class_exe_element_wrapper.html#ab7df12d050ebc48a6ffd6ff53896d7c5" title=" " alt="" coords="1216,170,1359,210"/>
-<area shape="poly" title=" " alt="" coords="909,199,1200,190,1200,195,909,204"/>
-<area shape="rect" href="class_exe_element_wrapper.html#a7764c345edef03df4f974f7f09a70a3b" title=" " alt="" coords="969,227,1112,268"/>
-<area shape="poly" title=" " alt="" coords="874,216,954,230,953,235,873,221"/>
-<area shape="poly" title=" " alt="" coords="842,189,977,150,979,156,844,194"/>
-<area shape="poly" title=" " alt="" coords="1241,170,1239,160,1247,151,1263,145,1288,143,1314,146,1330,152,1328,157,1313,151,1288,148,1264,150,1250,155,1244,161,1247,169"/>
-<area shape="poly" title=" " alt="" coords="1112,228,1200,208,1201,213,1113,234"/>
-<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="1233,288,1342,314"/>
-<area shape="poly" title=" " alt="" coords="1113,260,1219,283,1217,289,1112,266"/>
-<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1173,235,1402,260"/>
-<area shape="poly" title=" " alt="" coords="1113,245,1157,245,1157,250,1113,250"/>
-<area shape="poly" title=" " alt="" coords="242,192,240,183,246,174,260,168,280,166,303,168,316,174,313,179,301,173,280,171,261,173,249,178,245,184,247,191"/>
-<area shape="poly" title=" " alt="" coords="541,340,599,283,638,252,680,226,693,221,695,226,683,231,641,256,602,287,545,343"/>
-<area shape="poly" title=" " alt="" coords="607,340,681,328,831,313,980,304,1218,298,1218,303,980,309,831,318,682,333,607,346"/>
-<area shape="rect" href="class_exe_node_wrapper.html#abd74c2637211cf471d022b528654c84c" title=" " alt="" coords="717,472,873,498"/>
-<area shape="poly" title=" " alt="" coords="554,381,611,420,682,457,704,465,702,470,680,462,609,424,551,385"/>
-<area shape="rect" href="class_import_base_dir_wrapper.html#afe88da9369b2a18c158ea15e1080546b" title=" " alt="" coords="719,522,871,562"/>
-<area shape="poly" title=" " alt="" coords="543,381,601,444,640,478,683,508,705,519,703,523,680,512,636,483,597,448,539,385"/>
-<area shape="rect" href="class_exe_element_wrapper.html#a227c20e3780b42bc18822e992bf4d116" title=" " alt="" coords="723,587,867,628"/>
-<area shape="poly" title=" " alt="" coords="537,382,558,422,590,474,632,527,683,572,710,586,707,591,680,576,628,530,586,477,554,425,532,384"/>
-<area shape="rect" href="class_exe_node_wrapper.html#aa90cce24f1bec49d87dc18b329dce62e" title=" " alt="" coords="712,241,878,267"/>
-<area shape="poly" title=" " alt="" coords="562,339,617,311,680,284,724,269,725,274,682,289,620,316,565,344"/>
-<area shape="rect" href="class_import_base_entry_wrapper.html#ac43611e5b2a326c78da167b0e4784de8" title=" " alt="" coords="712,407,878,448"/>
-<area shape="poly" title=" " alt="" coords="607,379,698,401,697,407,606,385"/>
-<area shape="rect" href="class_exe_node_wrapper.html#a8a0305cc15aefe812f69485bbe82508d" title=" " alt="" coords="706,342,884,382"/>
-<area shape="poly" title=" " alt="" coords="607,360,690,360,690,365,607,365"/>
-<area shape="rect" href="class_executable.html#a2f2044788eb57c73903dca8e6a0477c2" title=" " alt="" coords="963,529,1119,555"/>
-<area shape="poly" title=" " alt="" coords="871,540,947,540,947,545,871,545"/>
-<area shape="rect" href="class_executable.html#a862ee23abe249ba557c740f2d2c246c5" title=" " alt="" coords="961,579,1120,604"/>
-<area shape="poly" title=" " alt="" coords="872,555,959,572,958,578,871,560"/>
-<area shape="rect" href="class_import_base_dir_wrapper.html#a16504e08c818494a65042cbb0138e22e" title=" " alt="" coords="965,464,1117,505"/>
-<area shape="poly" title=" " alt="" coords="871,522,949,503,950,509,872,527"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a0493bdae87b5011993652335adb19577" title=" " alt="" coords="1222,571,1353,612"/>
-<area shape="poly" title=" " alt="" coords="1121,589,1207,589,1207,594,1121,594"/>
-<area shape="rect" href="class_import_base_entry_wrapper.html#ad5ee91f17a35bc9691a7d1cf96d7c75e" title=" " alt="" coords="958,350,1124,390"/>
-<area shape="poly" title=" " alt="" coords="878,406,943,390,944,395,879,411"/>
-<area shape="rect" href="namespaceimports__util.html#a3a68efb57dab497843ba53f23161f9a3" title=" " alt="" coords="957,415,1125,440"/>
-<area shape="poly" title=" " alt="" coords="878,425,941,425,941,430,878,430"/>
-<area shape="rect" href="namespacepe__util.html#a103f13d1382d5fa542fa6fb8a073f28a" title=" " alt="" coords="1207,391,1368,416"/>
-<area shape="poly" title=" " alt="" coords="1125,417,1192,410,1192,415,1126,422"/>
-<area shape="rect" href="namespacepe__util.html#a5d0faa3e638d06b8762b1e646c5ee8bb" title=" " alt="" coords="1214,440,1361,466"/>
-<area shape="poly" title=" " alt="" coords="1126,433,1199,441,1199,446,1125,439"/>
+<area shape="rect" title=" " alt="" coords="5,162,147,203"/>
+<area shape="rect" href="class_import_base_entry_wrapper.html#ad16dc8acadd054efecd45f7674571413" title=" " alt="" coords="195,117,366,157"/>
+<area shape="poly" title=" " alt="" coords="147,164,179,157,180,162,148,169"/>
+<area shape="rect" href="class_p_e_node_wrapper.html#a28b20b86c5782d2fe7e08249d0c503fd" title=" " alt="" coords="714,124,876,150"/>
+<area shape="poly" title=" " alt="" coords="104,159,145,131,193,103,300,51,349,35,413,21,475,10,525,3,574,6,634,21,675,39,713,63,772,111,769,115,710,67,673,44,632,26,573,11,525,9,476,15,415,26,350,40,302,56,196,107,148,135,107,164"/>
+<area shape="rect" href="class_import_entry_wrapper.html#ab63472dc9a23f18db573a468fc2a3c98" title=" " alt="" coords="213,206,348,247"/>
+<area shape="poly" title=" " alt="" coords="148,195,198,206,197,211,147,200"/>
+<area shape="rect" href="class_import_base_entry_wrapper.html#aa176da686bdcec05c9a4acd23c2cdf13" title=" " alt="" coords="198,357,363,397"/>
+<area shape="poly" title=" " alt="" coords="101,201,249,344,245,348,97,205"/>
+<area shape="rect" href="class_import_base_entry_wrapper.html#ac45174df1125d5b76924419a73948a40" title=" " alt="" coords="441,59,606,100"/>
+<area shape="poly" title=" " alt="" coords="366,114,425,100,426,105,367,119"/>
+<area shape="poly" title=" " alt="" coords="366,134,699,134,699,140,366,140"/>
+<area shape="rect" href="class_p_e_node_wrapper.html#a313df66e81dfce411fa83d0ebc08c935" title=" " alt="" coords="414,199,633,224"/>
+<area shape="poly" title=" " alt="" coords="350,155,466,191,464,196,349,161"/>
+<area shape="poly" title=" " alt="" coords="478,59,476,49,483,40,499,35,524,33,550,35,565,41,563,46,549,40,524,38,500,40,486,45,481,51,483,58"/>
+<area shape="poly" title=" " alt="" coords="755,125,747,116,752,106,768,100,795,97,825,100,840,107,838,112,824,105,795,103,769,105,755,110,752,115,759,122"/>
+<area shape="poly" title=" " alt="" coords="572,196,730,152,731,157,574,201"/>
+<area shape="poly" title=" " alt="" coords="484,200,476,190,480,180,497,174,524,172,554,175,569,182,567,187,553,180,524,177,498,179,484,184,481,190,488,197"/>
+<area shape="rect" href="class_exe_node_wrapper.html#a62bc3ef1f006f8b4ac823c3d573819ce" title=" " alt="" coords="681,273,909,299"/>
+<area shape="poly" title=" " alt="" coords="587,223,634,234,739,266,738,271,633,240,585,228"/>
+<area shape="rect" href="class_exe_node_wrapper.html#a5cd7f16e4529be2a96f87237e31b2611" title=" " alt="" coords="960,204,1115,230"/>
+<area shape="poly" title=" " alt="" coords="634,210,944,213,944,219,634,215"/>
+<area shape="poly" title=" " alt="" coords="755,275,747,265,752,255,768,249,795,247,825,250,840,257,838,262,824,255,795,252,769,254,755,259,752,264,759,271"/>
+<area shape="rect" href="class_exe_element_wrapper.html#ab7df12d050ebc48a6ffd6ff53896d7c5" title=" " alt="" coords="1209,259,1352,300"/>
+<area shape="poly" title=" " alt="" coords="909,282,1193,278,1193,283,909,287"/>
+<area shape="rect" href="class_exe_element_wrapper.html#a7764c345edef03df4f974f7f09a70a3b" title=" " alt="" coords="966,317,1109,357"/>
+<area shape="poly" title=" " alt="" coords="860,297,951,316,950,321,859,302"/>
+<area shape="poly" title=" " alt="" coords="842,270,974,232,976,237,843,275"/>
+<area shape="poly" title=" " alt="" coords="1235,259,1233,249,1240,240,1256,235,1281,233,1307,235,1322,241,1320,246,1306,240,1281,238,1257,240,1243,245,1238,251,1240,258"/>
+<area shape="poly" title=" " alt="" coords="1109,317,1193,297,1195,303,1110,323"/>
+<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="1226,373,1335,399"/>
+<area shape="poly" title=" " alt="" coords="1110,349,1211,370,1210,375,1109,354"/>
+<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1166,324,1395,350"/>
+<area shape="poly" title=" " alt="" coords="1110,334,1150,334,1150,340,1110,340"/>
+<area shape="poly" title=" " alt="" coords="242,206,240,196,246,187,260,181,280,179,303,182,316,188,313,193,301,187,280,185,261,186,249,191,245,197,247,205"/>
+<area shape="poly" title=" " alt="" coords="363,376,491,370,563,362,633,349,697,328,754,304,756,309,699,333,634,354,563,367,492,375,364,381"/>
+<area shape="rect" href="class_exe_node_wrapper.html#abd74c2637211cf471d022b528654c84c" title=" " alt="" coords="446,544,601,570"/>
+<area shape="poly" title=" " alt="" coords="296,396,342,463,376,499,415,529,432,538,430,543,413,534,372,503,338,466,291,399"/>
+<area shape="rect" href="class_exe_element_wrapper.html#a227c20e3780b42bc18822e992bf4d116" title=" " alt="" coords="452,249,595,289"/>
+<area shape="poly" title=" " alt="" coords="312,354,359,326,413,299,436,290,438,295,415,303,361,330,315,358"/>
+<area shape="rect" href="class_exe_node_wrapper.html#aa90cce24f1bec49d87dc18b329dce62e" title=" " alt="" coords="440,313,607,339"/>
+<area shape="poly" title=" " alt="" coords="363,357,443,340,444,346,364,362"/>
+<area shape="rect" href="class_import_base_entry_wrapper.html#ac43611e5b2a326c78da167b0e4784de8" title=" " alt="" coords="441,479,606,520"/>
+<area shape="poly" title=" " alt="" coords="309,396,357,430,415,464,431,471,429,476,413,469,354,435,306,400"/>
+<area shape="rect" href="class_exe_node_wrapper.html#a8a0305cc15aefe812f69485bbe82508d" title=" " alt="" coords="434,414,613,455"/>
+<area shape="poly" title=" " alt="" coords="364,394,420,407,419,412,363,399"/>
+<area shape="rect" href="class_import_base_entry_wrapper.html#ad5ee91f17a35bc9691a7d1cf96d7c75e" title=" " alt="" coords="712,509,878,549"/>
+<area shape="poly" title=" " alt="" coords="607,506,697,516,696,521,606,511"/>
+<area shape="rect" href="namespaceimports__util.html#a3a68efb57dab497843ba53f23161f9a3" title=" " alt="" coords="711,459,879,484"/>
+<area shape="poly" title=" " alt="" coords="606,488,695,479,696,485,607,494"/>
+<area shape="rect" href="namespacepe__util.html#a103f13d1382d5fa542fa6fb8a073f28a" title=" " alt="" coords="957,484,1118,510"/>
+<area shape="poly" title=" " alt="" coords="880,478,941,484,941,490,880,483"/>
+<area shape="rect" href="namespacepe__util.html#a5d0faa3e638d06b8762b1e646c5ee8bb" title=" " alt="" coords="964,435,1110,460"/>
+<area shape="poly" title=" " alt="" coords="880,461,948,454,949,459,880,466"/>
 </map>
 </div>
 
@@ -474,7 +461,7 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_exe_element_wrapper.html#a8108914de5353bd75c8874bb3fb17129">ExeElementWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00264">264</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00263">263</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,74 +531,69 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_exe_node_wrapper.html#a086e8cfa49daea540fc55956821375f1">ExeNodeWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00252">252</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00251">251</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_import_entry_wrapper_a3135167a00f8e3fc243f05a701e9b065_cgraph.png" border="0" usemap="#aclass_import_entry_wrapper_a3135167a00f8e3fc243f05a701e9b065_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_import_entry_wrapper_a3135167a00f8e3fc243f05a701e9b065_cgraph" id="aclass_import_entry_wrapper_a3135167a00f8e3fc243f05a701e9b065_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,141,173"/>
-<area shape="rect" href="class_import_entry_wrapper.html#a132724524fcda326d1945ca222874ec4" title=" " alt="" coords="189,132,324,173"/>
-<area shape="poly" title=" " alt="" coords="141,150,173,150,173,155,141,155"/>
-<area shape="rect" href="class_import_entry_wrapper.html#a2ce480e25eb5fd9670ce9d73b8c36fdd" title=" " alt="" coords="372,164,507,205"/>
-<area shape="poly" title=" " alt="" coords="325,162,357,167,356,173,324,167"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#aba099ced8dd45bac432cb3af3abff910" title=" " alt="" coords="374,52,505,93"/>
-<area shape="poly" title=" " alt="" coords="304,129,376,97,378,102,306,134"/>
-<area shape="rect" href="class_executable.html#a3f2511a46b6732f4afbcaa6a1bfb6c46" title=" " alt="" coords="739,172,905,197"/>
-<area shape="poly" title=" " alt="" coords="508,182,723,182,723,187,508,187"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a4cbbe66b2777fa7c450f612ec3a20ae6" title=" " alt="" coords="751,72,892,113"/>
-<area shape="poly" title=" " alt="" coords="507,166,736,110,737,115,509,171"/>
-<area shape="rect" href="class_import_entry_wrapper.html#a62c962b8758ac8db68510abe5471a562" title=" " alt="" coords="555,272,691,313"/>
-<area shape="poly" title=" " alt="" coords="476,203,557,251,574,261,571,266,554,256,474,207"/>
-<area shape="rect" href="class_executable.html#a310a106a5d61c54137c75c54042f4fa0" title=" " alt="" coords="758,333,886,358"/>
-<area shape="poly" title=" " alt="" coords="453,204,469,232,492,265,522,297,557,322,602,340,650,349,698,353,743,352,743,358,698,358,649,355,600,345,554,327,518,301,488,268,465,235,449,206"/>
-<area shape="rect" href="class_executable.html#a862ee23abe249ba557c740f2d2c246c5" title=" " alt="" coords="953,232,1112,257"/>
-<area shape="poly" title=" " alt="" coords="508,188,938,232,937,237,507,194"/>
-<area shape="rect" href="namespacepe__util.html#a3206ffc8778304d1d269decfbe3ab0b6" title=" " alt="" coords="557,70,689,96"/>
-<area shape="poly" title=" " alt="" coords="472,161,554,113,577,101,580,105,557,117,475,166"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a64f38e33f915741eb283ef9a34cacb6d" title=" " alt="" coords="968,101,1098,142"/>
-<area shape="poly" title=" " alt="" coords="867,168,952,143,953,148,869,173"/>
-<area shape="rect" href="class_buffer_exception.html#a4af32a7ca757175a41906ec6e889b126" title=" " alt="" coords="1160,52,1368,77"/>
-<area shape="poly" title=" " alt="" coords="1098,103,1160,87,1193,79,1194,84,1161,92,1099,108"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a2d68f6930726a129478c8ab5ed38779a" title=" " alt="" coords="1199,101,1329,142"/>
-<area shape="poly" title=" " alt="" coords="1098,119,1183,119,1183,124,1098,124"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a0493bdae87b5011993652335adb19577" title=" " alt="" coords="1199,167,1329,207"/>
-<area shape="poly" title=" " alt="" coords="1099,137,1184,162,1183,167,1098,143"/>
-<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1416,192,1645,217"/>
-<area shape="poly" title=" " alt="" coords="1336,75,1369,87,1408,108,1445,132,1505,179,1501,183,1442,137,1405,113,1367,92,1334,80"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a04f5bb327ac0789b872d0771b11adc6b" title=" " alt="" coords="953,167,1112,207"/>
-<area shape="poly" title=" " alt="" coords="867,111,954,151,969,158,966,163,952,156,865,116"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#adb10018e327d14ac29d842aee3ab5465" title=" " alt="" coords="968,36,1098,77"/>
-<area shape="poly" title=" " alt="" coords="893,78,952,67,953,73,894,83"/>
-<area shape="poly" title=" " alt="" coords="1113,184,1184,184,1184,190,1113,190"/>
-<area shape="poly" title=" " alt="" coords="1098,56,1145,58,1145,63,1098,61"/>
-<area shape="poly" title=" " alt="" coords="1099,72,1184,97,1183,102,1098,77"/>
-<area shape="poly" title=" " alt="" coords="1094,75,1114,88,1130,104,1138,121,1147,136,1162,152,1186,165,1184,170,1159,156,1142,140,1134,123,1125,108,1111,92,1091,80"/>
-<area shape="poly" title=" " alt="" coords="661,269,782,203,784,207,663,274"/>
-<area shape="rect" href="class_p_e_file.html#aaf212c882b9f95a0f6542cd656ffbad4" title=" " alt="" coords="741,280,902,305"/>
-<area shape="poly" title=" " alt="" coords="691,290,726,290,726,295,691,295"/>
-<area shape="poly" title=" " alt="" coords="692,308,757,326,756,331,691,313"/>
-<area shape="poly" title=" " alt="" coords="885,331,1446,218,1447,223,886,336"/>
-<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="978,384,1087,409"/>
-<area shape="poly" title=" " alt="" coords="879,357,963,377,962,382,878,362"/>
-<area shape="poly" title=" " alt="" coords="871,330,904,315,927,295,951,274,976,261,979,266,955,279,931,299,906,320,874,335"/>
-<area shape="rect" href="class_executable.html#a9d1979e57f2c6d4146e8ddf1892c6e99" title=" " alt="" coords="958,433,1107,458"/>
-<area shape="poly" title=" " alt="" coords="844,357,893,387,954,419,968,425,966,430,952,424,890,392,841,361"/>
-<area shape="rect" href="class_executable.html#ad01bb6955b84cb82c66f7a0c5ba1cd82" title=" " alt="" coords="1192,382,1336,408"/>
-<area shape="poly" title=" " alt="" coords="886,347,1113,368,1177,378,1176,383,1112,374,886,353"/>
-<area shape="poly" title=" " alt="" coords="1087,228,1183,204,1184,209,1088,233"/>
-<area shape="poly" title=" " alt="" coords="1094,430,1187,409,1188,414,1095,435"/>
-<area shape="rect" href="class_executable.html#a513ca66070ae1b44cf81981346165d82" title=" " alt="" coords="1696,358,1870,384"/>
-<area shape="poly" title=" " alt="" coords="1331,379,1415,367,1480,363,1530,364,1645,367,1680,367,1680,373,1645,372,1530,369,1480,369,1416,372,1331,384"/>
-<area shape="rect" href="class_executable.html#a8715ce5ec6dfcf19916b1bcab0ed6c5a" title=" " alt="" coords="1693,408,1872,433"/>
-<area shape="poly" title=" " alt="" coords="1331,406,1416,418,1552,424,1677,422,1677,428,1552,429,1415,423,1331,411"/>
-<area shape="rect" href="class_executable.html#a383eb91b928dc417d9a631704737a192" title=" " alt="" coords="1452,382,1608,408"/>
-<area shape="poly" title=" " alt="" coords="1337,392,1436,392,1436,398,1337,398"/>
-<area shape="poly" title=" " alt="" coords="1609,385,1680,378,1680,383,1609,390"/>
-<area shape="poly" title=" " alt="" coords="1609,400,1678,407,1677,412,1609,405"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a0757c0f9b1afb7397f1ec44d36d3a7af" title=" " alt="" coords="557,5,689,46"/>
-<area shape="poly" title=" " alt="" coords="505,53,542,44,543,49,506,58"/>
-<area shape="poly" title=" " alt="" coords="687,44,745,64,743,69,685,49"/>
+<area shape="rect" title=" " alt="" coords="5,165,141,206"/>
+<area shape="rect" href="class_import_entry_wrapper.html#a132724524fcda326d1945ca222874ec4" title=" " alt="" coords="189,165,324,206"/>
+<area shape="poly" title=" " alt="" coords="141,183,173,183,173,188,141,188"/>
+<area shape="rect" href="class_import_entry_wrapper.html#a2ce480e25eb5fd9670ce9d73b8c36fdd" title=" " alt="" coords="372,165,507,206"/>
+<area shape="poly" title=" " alt="" coords="324,183,357,183,357,188,324,188"/>
+<area shape="rect" href="class_executable.html#a3f2511a46b6732f4afbcaa6a1bfb6c46" title=" " alt="" coords="739,29,905,54"/>
+<area shape="poly" title=" " alt="" coords="459,163,501,126,554,93,596,76,639,63,723,47,724,53,640,69,597,81,557,97,504,131,463,167"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a4cbbe66b2777fa7c450f612ec3a20ae6" title=" " alt="" coords="751,79,892,119"/>
+<area shape="poly" title=" " alt="" coords="470,163,509,140,555,122,600,110,647,103,736,96,736,101,648,108,601,116,556,127,512,145,473,167"/>
+<area shape="rect" href="class_import_entry_wrapper.html#a62c962b8758ac8db68510abe5471a562" title=" " alt="" coords="555,136,691,177"/>
+<area shape="poly" title=" " alt="" coords="507,172,540,167,541,172,508,177"/>
+<area shape="rect" href="class_executable.html#a310a106a5d61c54137c75c54042f4fa0" title=" " alt="" coords="758,252,886,277"/>
+<area shape="poly" title=" " alt="" coords="485,204,556,230,653,248,743,258,742,263,652,254,555,235,483,209"/>
+<area shape="rect" href="class_executable.html#a862ee23abe249ba557c740f2d2c246c5" title=" " alt="" coords="953,201,1112,226"/>
+<area shape="poly" title=" " alt="" coords="508,186,937,207,937,212,507,191"/>
+<area shape="rect" href="namespacepe__util.html#a3206ffc8778304d1d269decfbe3ab0b6" title=" " alt="" coords="557,302,689,328"/>
+<area shape="poly" title=" " alt="" coords="464,204,505,242,557,281,578,293,575,297,554,285,502,246,460,208"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a64f38e33f915741eb283ef9a34cacb6d" title=" " alt="" coords="968,5,1098,46"/>
+<area shape="poly" title=" " alt="" coords="905,33,952,29,952,34,906,38"/>
+<area shape="rect" href="class_buffer_exception.html#a4af32a7ca757175a41906ec6e889b126" title=" " alt="" coords="1160,21,1368,46"/>
+<area shape="poly" title=" " alt="" coords="1098,25,1145,27,1145,32,1098,31"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a2d68f6930726a129478c8ab5ed38779a" title=" " alt="" coords="1199,71,1329,111"/>
+<area shape="poly" title=" " alt="" coords="1099,41,1184,66,1183,71,1098,47"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a0493bdae87b5011993652335adb19577" title=" " alt="" coords="1199,136,1329,177"/>
+<area shape="poly" title=" " alt="" coords="1094,44,1114,57,1130,74,1138,90,1147,106,1162,121,1186,134,1184,139,1159,125,1142,109,1134,93,1125,77,1111,61,1091,49"/>
+<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1416,136,1645,161"/>
+<area shape="poly" title=" " alt="" coords="1331,45,1369,57,1439,90,1497,124,1495,129,1436,95,1367,61,1330,50"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a04f5bb327ac0789b872d0771b11adc6b" title=" " alt="" coords="953,136,1112,177"/>
+<area shape="poly" title=" " alt="" coords="894,116,941,129,940,134,892,121"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#adb10018e327d14ac29d842aee3ab5465" title=" " alt="" coords="968,71,1098,111"/>
+<area shape="poly" title=" " alt="" coords="893,94,952,91,952,97,893,99"/>
+<area shape="poly" title=" " alt="" coords="1113,154,1184,154,1184,159,1113,159"/>
+<area shape="poly" title=" " alt="" coords="1098,72,1160,56,1193,48,1194,53,1161,62,1099,77"/>
+<area shape="poly" title=" " alt="" coords="1098,88,1183,88,1183,94,1098,94"/>
+<area shape="poly" title=" " alt="" coords="1099,107,1184,131,1183,136,1098,112"/>
+<area shape="poly" title=" " alt="" coords="644,134,686,99,737,65,752,58,754,63,740,69,689,103,648,138"/>
+<area shape="rect" href="class_p_e_file.html#aaf212c882b9f95a0f6542cd656ffbad4" title=" " alt="" coords="741,144,902,169"/>
+<area shape="poly" title=" " alt="" coords="691,154,726,154,726,159,691,159"/>
+<area shape="poly" title=" " alt="" coords="663,175,784,241,782,246,661,179"/>
+<area shape="poly" title=" " alt="" coords="886,258,992,250,1112,236,1240,214,1367,186,1462,163,1464,168,1368,191,1241,220,1113,242,992,255,886,263"/>
+<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="978,302,1087,328"/>
+<area shape="poly" title=" " alt="" coords="879,275,963,296,962,301,878,280"/>
+<area shape="poly" title=" " alt="" coords="878,248,961,228,962,233,879,253"/>
+<area shape="rect" href="class_executable.html#a9d1979e57f2c6d4146e8ddf1892c6e99" title=" " alt="" coords="958,352,1107,377"/>
+<area shape="poly" title=" " alt="" coords="844,275,893,306,954,338,968,343,966,348,952,343,890,311,841,280"/>
+<area shape="rect" href="class_executable.html#ad01bb6955b84cb82c66f7a0c5ba1cd82" title=" " alt="" coords="1192,352,1336,377"/>
+<area shape="poly" title=" " alt="" coords="834,276,852,302,880,333,914,364,954,387,987,397,1021,403,1090,403,1156,394,1211,380,1212,385,1157,399,1091,409,1020,408,985,403,952,392,911,368,876,337,848,305,829,279"/>
+<area shape="poly" title=" " alt="" coords="1087,198,1183,174,1184,179,1088,203"/>
+<area shape="poly" title=" " alt="" coords="1108,362,1176,362,1176,367,1108,367"/>
+<area shape="rect" href="class_executable.html#a513ca66070ae1b44cf81981346165d82" title=" " alt="" coords="1696,377,1870,402"/>
+<area shape="poly" title=" " alt="" coords="1331,375,1416,387,1554,393,1680,392,1680,397,1554,398,1415,392,1331,380"/>
+<area shape="rect" href="class_executable.html#a8715ce5ec6dfcf19916b1bcab0ed6c5a" title=" " alt="" coords="1693,328,1872,353"/>
+<area shape="poly" title=" " alt="" coords="1331,348,1415,336,1480,333,1530,333,1645,336,1677,337,1677,342,1645,342,1530,338,1480,338,1416,342,1331,353"/>
+<area shape="rect" href="class_executable.html#a383eb91b928dc417d9a631704737a192" title=" " alt="" coords="1452,352,1608,377"/>
+<area shape="poly" title=" " alt="" coords="1337,362,1436,362,1436,367,1337,367"/>
+<area shape="poly" title=" " alt="" coords="1609,370,1680,377,1680,382,1609,375"/>
+<area shape="poly" title=" " alt="" coords="1609,354,1677,348,1678,353,1609,360"/>
 </map>
 </div>
 
@@ -646,7 +628,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_exe_element_wrapper.html#a43f0978ee5667e5dd34293f155d3d3cf">ExeElementWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00236">236</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00235">235</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -749,7 +731,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_import_base_entry_wrapper.html#ad5ee91f17a35bc9691a7d1cf96d7c75e">ImportBaseEntryWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00275">275</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00274">274</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -838,72 +820,67 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_exe_element_wrapper.html#af2f26b8da4cf2339944f1a4b8473454b">ExeElementWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00219">219</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00218">218</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_import_entry_wrapper_a132724524fcda326d1945ca222874ec4_cgraph.png" border="0" usemap="#aclass_import_entry_wrapper_a132724524fcda326d1945ca222874ec4_cgraph" loading="lazy" alt=""/></div>
 <map name="aclass_import_entry_wrapper_a132724524fcda326d1945ca222874ec4_cgraph" id="aclass_import_entry_wrapper_a132724524fcda326d1945ca222874ec4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,141,173"/>
-<area shape="rect" href="class_import_entry_wrapper.html#a2ce480e25eb5fd9670ce9d73b8c36fdd" title=" " alt="" coords="189,164,324,205"/>
-<area shape="poly" title=" " alt="" coords="142,162,174,167,173,173,141,167"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#aba099ced8dd45bac432cb3af3abff910" title=" " alt="" coords="191,52,322,93"/>
-<area shape="poly" title=" " alt="" coords="120,129,193,97,195,102,122,134"/>
-<area shape="rect" href="class_executable.html#a3f2511a46b6732f4afbcaa6a1bfb6c46" title=" " alt="" coords="555,172,722,197"/>
-<area shape="poly" title=" " alt="" coords="325,182,540,182,540,187,325,187"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a4cbbe66b2777fa7c450f612ec3a20ae6" title=" " alt="" coords="568,72,709,113"/>
-<area shape="poly" title=" " alt="" coords="324,166,552,110,554,115,325,171"/>
-<area shape="rect" href="class_import_entry_wrapper.html#a62c962b8758ac8db68510abe5471a562" title=" " alt="" coords="372,272,507,313"/>
-<area shape="poly" title=" " alt="" coords="293,203,373,251,390,261,388,266,371,256,290,207"/>
-<area shape="rect" href="class_executable.html#a310a106a5d61c54137c75c54042f4fa0" title=" " alt="" coords="575,333,702,358"/>
-<area shape="poly" title=" " alt="" coords="270,204,286,232,309,265,338,297,373,322,419,340,467,349,515,353,559,352,559,358,515,358,466,355,417,345,371,327,335,301,305,268,281,235,265,206"/>
-<area shape="rect" href="class_executable.html#a862ee23abe249ba557c740f2d2c246c5" title=" " alt="" coords="770,232,929,257"/>
-<area shape="poly" title=" " alt="" coords="325,188,754,232,754,237,324,194"/>
-<area shape="rect" href="namespacepe__util.html#a3206ffc8778304d1d269decfbe3ab0b6" title=" " alt="" coords="374,70,506,96"/>
-<area shape="poly" title=" " alt="" coords="289,161,371,113,394,101,397,105,373,117,292,166"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a64f38e33f915741eb283ef9a34cacb6d" title=" " alt="" coords="784,101,914,142"/>
-<area shape="poly" title=" " alt="" coords="684,168,768,143,770,148,685,173"/>
-<area shape="rect" href="class_buffer_exception.html#a4af32a7ca757175a41906ec6e889b126" title=" " alt="" coords="977,52,1184,77"/>
-<area shape="poly" title=" " alt="" coords="914,103,976,87,1009,79,1011,84,978,92,916,108"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a2d68f6930726a129478c8ab5ed38779a" title=" " alt="" coords="1016,101,1146,142"/>
-<area shape="poly" title=" " alt="" coords="915,119,1000,119,1000,124,915,124"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a0493bdae87b5011993652335adb19577" title=" " alt="" coords="1016,167,1146,207"/>
-<area shape="poly" title=" " alt="" coords="916,137,1001,162,1000,167,914,143"/>
-<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1232,192,1462,217"/>
-<area shape="poly" title=" " alt="" coords="1152,75,1185,87,1225,108,1262,132,1321,179,1318,183,1259,137,1222,113,1183,92,1151,80"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a04f5bb327ac0789b872d0771b11adc6b" title=" " alt="" coords="770,167,929,207"/>
-<area shape="poly" title=" " alt="" coords="684,111,771,151,785,158,783,163,769,156,682,116"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#adb10018e327d14ac29d842aee3ab5465" title=" " alt="" coords="784,36,914,77"/>
-<area shape="poly" title=" " alt="" coords="709,78,768,67,769,73,710,83"/>
-<area shape="poly" title=" " alt="" coords="929,184,1000,184,1000,190,929,190"/>
-<area shape="poly" title=" " alt="" coords="915,56,961,58,961,63,915,61"/>
-<area shape="poly" title=" " alt="" coords="916,72,1001,97,1000,102,914,77"/>
-<area shape="poly" title=" " alt="" coords="911,75,931,88,946,104,955,121,963,136,979,152,1003,165,1000,170,975,156,959,140,950,123,942,108,927,92,908,80"/>
-<area shape="poly" title=" " alt="" coords="478,269,598,203,601,207,480,274"/>
-<area shape="rect" href="class_p_e_file.html#aaf212c882b9f95a0f6542cd656ffbad4" title=" " alt="" coords="558,280,719,305"/>
-<area shape="poly" title=" " alt="" coords="508,290,542,290,542,295,508,295"/>
-<area shape="poly" title=" " alt="" coords="509,308,574,326,572,331,507,313"/>
-<area shape="poly" title=" " alt="" coords="702,331,1263,218,1264,223,703,336"/>
-<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="795,384,904,409"/>
-<area shape="poly" title=" " alt="" coords="696,357,780,377,779,382,694,362"/>
-<area shape="poly" title=" " alt="" coords="688,330,720,315,744,295,768,274,793,261,795,266,771,279,748,299,723,320,690,335"/>
-<area shape="rect" href="class_executable.html#a9d1979e57f2c6d4146e8ddf1892c6e99" title=" " alt="" coords="775,433,924,458"/>
-<area shape="poly" title=" " alt="" coords="661,357,710,387,771,419,785,425,783,430,769,424,707,392,658,361"/>
-<area shape="rect" href="class_executable.html#ad01bb6955b84cb82c66f7a0c5ba1cd82" title=" " alt="" coords="1008,382,1153,408"/>
-<area shape="poly" title=" " alt="" coords="703,347,929,368,993,378,993,383,929,374,702,353"/>
-<area shape="poly" title=" " alt="" coords="904,228,1000,204,1001,209,905,233"/>
-<area shape="poly" title=" " alt="" coords="911,430,1003,409,1005,414,912,435"/>
-<area shape="rect" href="class_executable.html#a513ca66070ae1b44cf81981346165d82" title=" " alt="" coords="1512,358,1686,384"/>
-<area shape="poly" title=" " alt="" coords="1147,379,1232,367,1297,363,1347,364,1462,367,1496,367,1496,373,1462,372,1347,369,1297,369,1233,372,1148,384"/>
-<area shape="rect" href="class_executable.html#a8715ce5ec6dfcf19916b1bcab0ed6c5a" title=" " alt="" coords="1510,408,1689,433"/>
-<area shape="poly" title=" " alt="" coords="1148,406,1233,418,1369,424,1494,422,1494,428,1369,429,1232,423,1147,411"/>
-<area shape="rect" href="class_executable.html#a383eb91b928dc417d9a631704737a192" title=" " alt="" coords="1269,382,1425,408"/>
-<area shape="poly" title=" " alt="" coords="1153,392,1253,392,1253,398,1153,398"/>
-<area shape="poly" title=" " alt="" coords="1425,385,1496,378,1497,383,1426,390"/>
-<area shape="poly" title=" " alt="" coords="1426,400,1495,407,1494,412,1425,405"/>
-<area shape="rect" href="class_abstract_byte_buffer.html#a0757c0f9b1afb7397f1ec44d36d3a7af" title=" " alt="" coords="374,5,505,46"/>
-<area shape="poly" title=" " alt="" coords="321,53,359,44,360,49,323,58"/>
-<area shape="poly" title=" " alt="" coords="503,44,562,64,560,69,502,49"/>
+<area shape="rect" title=" " alt="" coords="5,165,141,206"/>
+<area shape="rect" href="class_import_entry_wrapper.html#a2ce480e25eb5fd9670ce9d73b8c36fdd" title=" " alt="" coords="189,165,324,206"/>
+<area shape="poly" title=" " alt="" coords="141,183,173,183,173,188,141,188"/>
+<area shape="rect" href="class_executable.html#a3f2511a46b6732f4afbcaa6a1bfb6c46" title=" " alt="" coords="555,29,722,54"/>
+<area shape="poly" title=" " alt="" coords="276,163,317,126,371,93,412,76,456,63,540,47,541,53,457,69,414,81,373,97,320,131,279,167"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a4cbbe66b2777fa7c450f612ec3a20ae6" title=" " alt="" coords="568,79,709,119"/>
+<area shape="poly" title=" " alt="" coords="287,163,326,140,371,122,417,110,464,103,552,96,553,101,465,108,418,116,373,127,328,145,290,167"/>
+<area shape="rect" href="class_import_entry_wrapper.html#a62c962b8758ac8db68510abe5471a562" title=" " alt="" coords="372,136,507,177"/>
+<area shape="poly" title=" " alt="" coords="324,172,356,167,357,172,325,177"/>
+<area shape="rect" href="class_executable.html#a310a106a5d61c54137c75c54042f4fa0" title=" " alt="" coords="575,252,702,277"/>
+<area shape="poly" title=" " alt="" coords="302,204,373,230,469,248,560,258,559,263,469,254,371,235,300,209"/>
+<area shape="rect" href="class_executable.html#a862ee23abe249ba557c740f2d2c246c5" title=" " alt="" coords="770,201,929,226"/>
+<area shape="poly" title=" " alt="" coords="324,186,754,207,754,212,324,191"/>
+<area shape="rect" href="namespacepe__util.html#a3206ffc8778304d1d269decfbe3ab0b6" title=" " alt="" coords="374,302,506,328"/>
+<area shape="poly" title=" " alt="" coords="280,204,322,242,373,281,394,293,392,297,371,285,319,246,277,208"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a64f38e33f915741eb283ef9a34cacb6d" title=" " alt="" coords="784,5,914,46"/>
+<area shape="poly" title=" " alt="" coords="722,33,768,29,769,34,722,38"/>
+<area shape="rect" href="class_buffer_exception.html#a4af32a7ca757175a41906ec6e889b126" title=" " alt="" coords="977,21,1184,46"/>
+<area shape="poly" title=" " alt="" coords="915,25,961,27,961,32,915,31"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a2d68f6930726a129478c8ab5ed38779a" title=" " alt="" coords="1016,71,1146,111"/>
+<area shape="poly" title=" " alt="" coords="916,41,1001,66,1000,71,914,47"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a0493bdae87b5011993652335adb19577" title=" " alt="" coords="1016,136,1146,177"/>
+<area shape="poly" title=" " alt="" coords="911,44,931,57,946,74,955,90,963,106,979,121,1003,134,1000,139,975,125,959,109,950,93,942,77,927,61,908,49"/>
+<area shape="rect" href="class_custom_exception.html#a1de10b1a2ce870d04854456f3d69590f" title=" " alt="" coords="1232,136,1462,161"/>
+<area shape="poly" title=" " alt="" coords="1148,45,1185,57,1255,90,1314,124,1311,129,1253,95,1183,61,1146,50"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#a04f5bb327ac0789b872d0771b11adc6b" title=" " alt="" coords="770,136,929,177"/>
+<area shape="poly" title=" " alt="" coords="710,116,758,129,757,134,709,121"/>
+<area shape="rect" href="class_abstract_byte_buffer.html#adb10018e327d14ac29d842aee3ab5465" title=" " alt="" coords="784,71,914,111"/>
+<area shape="poly" title=" " alt="" coords="710,94,768,91,768,97,710,99"/>
+<area shape="poly" title=" " alt="" coords="929,154,1000,154,1000,159,929,159"/>
+<area shape="poly" title=" " alt="" coords="914,72,976,56,1009,48,1011,53,978,62,916,77"/>
+<area shape="poly" title=" " alt="" coords="915,88,1000,88,1000,94,915,94"/>
+<area shape="poly" title=" " alt="" coords="916,107,1001,131,1000,136,914,112"/>
+<area shape="poly" title=" " alt="" coords="461,134,502,99,554,65,569,58,571,63,557,69,505,103,464,138"/>
+<area shape="rect" href="class_p_e_file.html#aaf212c882b9f95a0f6542cd656ffbad4" title=" " alt="" coords="558,144,719,169"/>
+<area shape="poly" title=" " alt="" coords="508,154,542,154,542,159,508,159"/>
+<area shape="poly" title=" " alt="" coords="480,175,601,241,598,246,478,179"/>
+<area shape="poly" title=" " alt="" coords="702,258,809,250,929,236,1057,214,1184,186,1279,163,1280,168,1185,191,1058,220,929,242,809,255,703,263"/>
+<area shape="rect" href="namespace_logger.html#a36e3deee152da96a491b670a00d224c9" title=" " alt="" coords="795,302,904,328"/>
+<area shape="poly" title=" " alt="" coords="696,275,780,296,779,301,694,280"/>
+<area shape="poly" title=" " alt="" coords="694,248,778,228,779,233,696,253"/>
+<area shape="rect" href="class_executable.html#a9d1979e57f2c6d4146e8ddf1892c6e99" title=" " alt="" coords="775,352,924,377"/>
+<area shape="poly" title=" " alt="" coords="661,275,710,306,771,338,785,343,783,348,769,343,707,311,658,280"/>
+<area shape="rect" href="class_executable.html#ad01bb6955b84cb82c66f7a0c5ba1cd82" title=" " alt="" coords="1008,352,1153,377"/>
+<area shape="poly" title=" " alt="" coords="650,276,669,302,696,333,731,364,771,387,803,397,838,403,907,403,973,394,1028,380,1029,385,974,399,908,409,837,408,802,403,769,392,728,368,692,337,665,305,646,279"/>
+<area shape="poly" title=" " alt="" coords="904,198,1000,174,1001,179,905,203"/>
+<area shape="poly" title=" " alt="" coords="924,362,993,362,993,367,924,367"/>
+<area shape="rect" href="class_executable.html#a513ca66070ae1b44cf81981346165d82" title=" " alt="" coords="1512,377,1686,402"/>
+<area shape="poly" title=" " alt="" coords="1148,375,1233,387,1370,393,1496,392,1497,397,1370,398,1232,392,1147,380"/>
+<area shape="rect" href="class_executable.html#a8715ce5ec6dfcf19916b1bcab0ed6c5a" title=" " alt="" coords="1510,328,1689,353"/>
+<area shape="poly" title=" " alt="" coords="1147,348,1232,336,1297,333,1347,333,1462,336,1494,337,1494,342,1462,342,1347,338,1297,338,1233,342,1148,353"/>
+<area shape="rect" href="class_executable.html#a383eb91b928dc417d9a631704737a192" title=" " alt="" coords="1269,352,1425,377"/>
+<area shape="poly" title=" " alt="" coords="1153,362,1253,362,1253,367,1153,367"/>
+<area shape="poly" title=" " alt="" coords="1426,370,1497,377,1496,382,1425,375"/>
+<area shape="poly" title=" " alt="" coords="1425,354,1494,348,1495,353,1426,360"/>
 </map>
 </div>
 
@@ -1048,7 +1025,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_exe_element_wrapper.html#a227c20e3780b42bc18822e992bf4d116">ExeElementWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00191">191</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00190">190</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1120,7 +1097,7 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="class_exe_element_wrapper.html#a087ecf5a983c1ef1e8de95b16c487616">ExeElementWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00214">214</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00213">213</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1116,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00226">226</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00225">225</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1213,7 +1190,7 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="class_exe_node_wrapper.html#a8a0305cc15aefe812f69485bbe82508d">ExeNodeWrapper</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00174">174</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_import_dir_wrapper_8cpp_source.html#l00173">173</a> of file <a class="el" href="_import_dir_wrapper_8cpp_source.html">ImportDirWrapper.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
