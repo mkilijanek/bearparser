@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -41,7 +41,7 @@ jobs:
       # clones them when that directory is missing, so checking the pinned
       # commit out there is all it takes for it to use that one.
       - name: Check out the test samples (pinned)
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: ${{ env.BEARPARSER_TESTS_REPO }}
           ref: ${{ env.BEARPARSER_TESTS_SHA }}

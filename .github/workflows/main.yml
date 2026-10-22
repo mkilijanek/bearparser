@@ -22,20 +22,20 @@ jobs:
     # Actions pinned by commit SHA (version in the comment): a re-pointed tag
     # must not change what runs while this job holds a write token.
     steps:
-    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         # actions-gh-pages pushes with the github_token it is given below;
         # nothing else here needs git credentials.
         persist-credentials: false
 
     - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@842268f8db8920aa97f0fddc12e9549fd177ce07 # v1.1.0
+      uses: mattnotmitt/doxygen-action@b84fe17600245bb5db3d6c247cc274ea98c15a3b # v1.12
       with:
         doxyfile-path: "./Doxyfile" # default is ./Doxyfile
         working-directory: "." # default is .
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3.9.3
+      uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/html
